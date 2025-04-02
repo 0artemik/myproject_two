@@ -1,0 +1,64 @@
+{% extends "main/layout.html" %}
+{% load static %}
+class 
+{% block title %}Главная - Antique store{% endblock %}
+
+{% block content %}
+<section>
+    <h2>Добро пожаловать в мир истории и уникальности!</h2>
+    <p>Наш антикварный магазин — это место, где каждая вещь хранит свою тайну и прошлое...</p>
+    <img src="{% static 'main/images/antique.jpg' %}" alt="Антиквариат" class="center">
+    <p>📌 Antique store – там, где прошлое становится ценностью!</p>
+    <img src="{% static 'main/images/i.jpg' %}" alt="Антиквариат" class="center">
+    <p> <p>
+
+
+        {% load static %}
+
+        <!-- Подключаем Bootstrap, если он не подключен -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'main/images/banner1.jpg' %}" class="d-block w-100" alt="Первый слайд">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Что-то с чем-то</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'main/images/banner2.jpg' %}" class="d-block w-100" alt="Второй слайд">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Хочу автомат</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'main/images/banner3.jpg' %}" class="d-block w-100" alt="Третий слайд">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ну и еще один баннер</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        
+        </section>
+        
+
+
+
+{% endblock %}
+
+
+

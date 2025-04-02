@@ -1,0 +1,28 @@
+{% extends "main/layout.html" %}
+
+{% block title %}Обратная связь{% endblock %}
+
+{% block content %}
+<section>
+    <h2>Обратная связь</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+</section>
+
+<script>
+    $(document).ready(function() {
+        // Изменение цвета фона при наведении на поля ввода
+        $('input, textarea').hover(
+            function() {
+                $(this).css('background-color', '#e8e6e6');
+            },
+            function() {
+                $(this).css('background-color', '#ffffff');
+            }
+        ); 
+    });
+</script>
+{% endblock %}

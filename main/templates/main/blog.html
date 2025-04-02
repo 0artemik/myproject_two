@@ -1,0 +1,16 @@
+{% extends "main/layout.html" %}
+
+{% block content %}
+<div class="blog-container">
+    <h2>{{ title }}</h2>
+    
+    {% for post in posts %}
+        <hr/>
+        <div>
+            <h3>{{ post.title }}</h3>
+            <p class="fs-5">{{ post.summary }}</p>
+            <h5 class="fs-6">Дата публикации: {{ post.posted|date:"d.m.Y H:i" }}</h5>
+            <p><a href="{% url 'blogpost' parametr=post.id %}" class="read-more">Читать далее</a></p>
+        </div>
+    {% endfor %}
+{% endblock %}

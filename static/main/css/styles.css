@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+}
+
+.blog-post {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.read-more {
+    background-color: #ff6600;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+}

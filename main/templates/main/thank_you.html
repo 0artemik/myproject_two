@@ -1,0 +1,33 @@
+{% extends "main/layout.html" %}
+
+{% block title %}Спасибо за отзыв!{% endblock %}
+
+{% block content %}
+<section>
+    <h2>Спасибо за ваш отзыв!</h2>
+    <p>Ваши данные:</p>
+    <ul>
+        <li>Имя: {{ data.name }}</li>
+        <li>Email: {{ data.email }}</li>
+        <li>Оценка сайта: {{ data.rating }}</li>
+    
+
+        <li>Интересующие разделы:
+            {% for interest in data.interests %}
+                {% if interest == "auctions" %}Быстрый аукцион{% endif %}
+                {% if interest == "catalog" %}Каталог{% endif %}
+                {% if interest == "resources" %}Полезные ресурсы{% endif %}
+                {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </li>
+        
+        <li>Частота посещений:
+            {% if data.frequency == "daily" %}Ежедневно{% endif %}
+            {% if data.frequency == "weekly" %}Еженедельно{% endif %}
+            {% if data.frequency == "monthly" %}Ежемесячно{% endif %}
+        </li>
+        
+        <li>Комментарии и пожелания: {{ data.comments }}</li>
+    </ul>
+</section>
+{% endblock %}
